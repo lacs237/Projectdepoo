@@ -1,7 +1,6 @@
 #include "producto.h"
-#include "tipos.h"
 
-producto::producto(TipoNombre nombre) {
+producto::producto(string nombre) {
     this->nombre = nombre;
 }
 
@@ -9,6 +8,6 @@ producto::producto() {
 
 }
 
-TipoNombre producto::get_nombre() {
+string producto::get_nombre() {
     return nombre;
 }
