@@ -1,6 +1,7 @@
+#include "tipos.h"
 #include "producto.h"
 
-producto::producto(string nombre) {
+producto::producto(TipoNombre nombre) {
     this->nombre = nombre;
 }
 
