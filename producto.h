@@ -2,17 +2,18 @@
 #define PROJECTDEPOO_PRODUCTO_H
 
 #include <iostream>
+#include "tipos.h"
 
 using namespace std;
 
 class producto {
 protected:
-    string nombre;
+    TipoNombre nombre;
 
 public:
-    producto(string nombre);
+    producto(TipoNombre nombre);
     producto();
-    string get_nombre();
+    TipoNombre get_nombre();
 };
 
 
