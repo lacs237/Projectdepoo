@@ -8,6 +8,7 @@ using namespace std;
 
 typedef  int TipoPosicion;
 typedef  int TipoTamaño;
+typedef  int TipoNumero;
 typedef  string TipoNombre;
 
 

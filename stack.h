@@ -7,7 +7,8 @@
 
 #include <iostream>
 
-#include "Producto.h"
+#include "producto.h"
+#include "tipos.h"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ private:
     TipoTamaño tamañoPredeterminado = 10;
 
 public:
-    stack(TipoTamaño tamano);
+    stack(TipoTamaño tamaño);
     void push(producto producto);
     producto* pop(TipoNombre producto);
 
