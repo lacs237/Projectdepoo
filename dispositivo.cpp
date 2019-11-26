@@ -1,5 +1,5 @@
 #include "dispositivo.h"
 
-dispositivo::dispositivo() : producto("Dispositivo") {
+Dispositivo::Dispositivo() : Producto("Dispositivo") {
 
 }

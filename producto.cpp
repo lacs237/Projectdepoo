@@ -6,7 +6,7 @@ Producto::Producto(TipoNombre nombre) {
     this->nombre = nombre;
 }
 
-Producto::Producto() {
+Producto::Producto(const char string1[6]) {
 
 }
 

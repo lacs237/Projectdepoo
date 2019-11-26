@@ -11,7 +11,7 @@ protected:
 
 public:
     Producto(TipoNombre nombre);
-    Producto();
+    Producto(const char string1[6]);
     TipoNombre get_nombre();
 };
 

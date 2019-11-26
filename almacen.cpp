@@ -13,7 +13,7 @@ Almacen::Almacen(TipoNumero n, TipoPosicion dimensionX, TipoPosicion dimensionY)
 
 void Almacen::Poner(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto) {
     Robot robot = robots[id - 1];
-    Producto productObject;
+    Producto productObject(nullptr);
     if (producto == "Libro") {
         productObject = Libro();
     } else if (producto == "Disco") {

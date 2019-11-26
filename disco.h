@@ -1,10 +1,11 @@
 #ifndef PROJECTDEPOO_DISCO_H
 #define PROJECTDEPOO_DISCO_H
 
-#include "producto.h"
-class disco : public producto {
+#include "Producto.h"
+
+class Disco : public Producto {
 public:
-    disco();
+    Disco();
 };
 
 

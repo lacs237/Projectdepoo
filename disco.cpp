@@ -1,6 +1,6 @@
-#include "disco.h"
-#include "dispositivo.h"
+#include "Disco.h"
 
-dispositivo::dispositivo() : producto("Dispositivo") {
+Disco::Disco() : Producto("Disco") {
 
 }
+
