@@ -1,34 +1,34 @@
 #include "almacen.h"
 
 
-almacen::almacen(int n, int dimensionX, int dimensionY) {
+Almacen::Almacen(TipoNumero n, TipoPosicion dimensionX, TipoPosicion dimensionY) {
     this->NUMERO_DE_ROBOTS = n;
-    robots = new robot[NUMERO_DE_ROBOTS];
-    Almacen = new stack*[dimensionX];
+    robots = new Robot[NUMERO_DE_ROBOTS];
+    almacen = new Stack*[dimensionX];
     for (int fila = 0; fila < dimensionY; ++fila) {
-        Almacen[fila] = new stack[dimensionY];
+        almacen[fila] = new Stack[dimensionY];
     }
 
 }
 
-void almacen::poner(int id, int destinoX, int destinoY, TipoNombre producto) {
-    robot robot = robots[id - 1];
-    producto productObject;
+void Almacen::Poner(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto) {
+    Robot robot = robots[id - 1];
+    Producto productObject;
     if (producto == "Libro") {
-        productObject = libro();
+        productObject = Libro();
     } else if (producto == "Disco") {
-        productObject = disco();
+        productObject = Disco();
     } else if (producto == "Dispositivo") {
-        productObject = dispositivo();
+        productObject = Dispositivo();
     }
-    robot.insertar(Almacen[destinoX][destinoY], productObject);
+    robot.Insertar(almacen[destinoX][destinoY], productObject);
 }
 
-void almacen::setOrigenRobot(int id, int x, int y) {
-    robots[id].setOrigin(x, y);
+void Almacen::setOrigenRobot(int id, TipoPosicion x, TipoPosicion y) {
+    robots[id].setInicio(x, y);
 }
 
-producto* almacen::obtener(int id, int destinoX, int destinoY, string producto) {
-    robot robot = robots[id - 1];
-    return robot.extraer(Almacen[destinoX][destinoY], producto);
+Producto* Almacen::Obtener(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto) {
+    Robot robot = robots[id - 1];
+    return robot.Extraer(almacen[destinoX][destinoY], producto);
 }

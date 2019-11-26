@@ -1,31 +1,31 @@
-#ifndef POOPROJECT_ALMACEN_HPP
-#define POOPROJECT_ALMACEN_HPP
+#ifndef POOPROJECT_ALMACEN_H
+#define POOPROJECT_ALMACEN_H
 
 #include <iostream>
 
-#include "stack.h"
-#include "robot.h"
+#include "Stack.h"
+#include "Robot.h"
 
-#include "libro.h"
-#include "dispositivo.h"
-#include "disco.h"
+#include "Libro.h"
+#include "Dispositivo.h"
+#include "Disco.h"
 
 using namespace std;
 
-class almacen {
+class Almacen {
 private:
-    robot *robots;
+    Robot *robots;
     TipoNumero NUMERO_DE_ROBOTS;
-    stack **Almacen;
+    Stack **almacen;
 
 public:
-    almacen(int n, int dimensionX, int dimensionY);
-    void setOrigenRobot(int id, int x, int y);
-    void poner(int id, int destinoX, int destinoY, string producto);
-    producto* obtener(int id, int destinoX, int destinoY, string producto);
+    Almacen(TipoNumero n, TipoPosicion dimensionX, TipoPosicion dimensionY);
+    void setOrigenRobot(int id, TipoPosicion x, TipoPosicion y);
+    void Poner(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto);
+    Producto* Obtener(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto);
 
 };
 
 
-#endif //POOPROJECT_ALMACEN_HPP
+#endif //POOPROJECT_ALMACEN_H
 
