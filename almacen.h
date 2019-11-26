@@ -16,7 +16,7 @@ class almacen {
 private:
     robot *robots;
     TipoNumero NUMERO_DE_ROBOTS;
-    stack **almacen;
+    stack **Almacen;
 
 public:
     almacen(int n, int dimensionX, int dimensionY);
