@@ -1,5 +1,5 @@
-#include "Tipos.h"
-#include "Producto.h"
+#include "tipos.h"
+#include "producto.h"
 #include <utility>
 
 Producto::Producto(TipoNombre nombre) {

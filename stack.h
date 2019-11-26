@@ -3,8 +3,8 @@
 
 #include <iostream>
 
-#include "Producto.h"
-#include "Tipos.h"
+#include "producto.h"
+#include "tipos.h"
 
 using namespace std;
 

@@ -1,9 +1,9 @@
 #ifndef PROJECTDEPOO_ROBOT_H
 #define PROJECTDEPOO_ROBOT_H
 
-#include "Tipos.h"
-#include "Producto.h"
-#include "Stack.h"
+#include "tipos.h"
+#include "producto.h"
+#include "stack.h"
 
 class Robot {
 private:

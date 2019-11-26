@@ -1,7 +1,7 @@
 #ifndef PROJECTDEPOO_DISCO_H
 #define PROJECTDEPOO_DISCO_H
 
-#include "Producto.h"
+#include "producto.h"
 
 class Disco : public Producto {
 public:

@@ -1,4 +1,4 @@
-#include "Disco.h"
+#include "disco.h"
 
 Disco::Disco() : Producto("Disco") {
 

@@ -1,7 +1,7 @@
 #ifndef PROJECTDEPOO_DISPOSITIVO_H
 #define PROJECTDEPOO_DISPOSITIVO_H
 
-#include "Producto.h"
+#include "producto.h"
 
 class Dispositivo : public Producto {
 public:
