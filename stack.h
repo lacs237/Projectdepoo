@@ -10,12 +10,12 @@ using namespace std;
 
 class Stack {
 private:
-    TipoTamaño tamaño, indiceTop;
+    TipoTamano tamano, indiceTop;
     Producto *productos;
-    TipoTamaño tamañoPredeterminado = 10;
+    TipoTamano tamanoPredeterminado = 10;
 
 public:
-    Stack(TipoTamaño tamaño);
+    Stack(TipoTamano tamano);
     void push(Producto producto);
     Producto* pop(TipoNombre producto);
 
