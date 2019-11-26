@@ -1,5 +1,5 @@
-#include "libro.h"
+#include "Libro.h"
 
-libro::libro() : producto("Libro") {
+Libro::Libro() : Producto("Libro") {
 
 }

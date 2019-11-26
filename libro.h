@@ -1,11 +1,11 @@
 #ifndef PROJECTDEPOO_LIBRO_H
 #define PROJECTDEPOO_LIBRO_H
 
-#include "producto.h"
+#include "Producto.h"
 
-class libro : public producto {
+class Libro : public Producto {
 public:
-    libro();
+    Libro();
 };
 
 
