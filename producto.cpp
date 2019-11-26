@@ -2,7 +2,7 @@
 #include "producto.h"
 #include <utility>
 
-Producto::Producto(TipoNombre nombre) {
+Producto::Producto(string nombre) {
     this->nombre = nombre;
 }
 
@@ -10,6 +10,6 @@ Producto::Producto() {
 
 }
 
-TipoNombre Producto::get_nombre() {
+string Producto::get_nombre() {
     return nombre;
 }

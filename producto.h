@@ -7,12 +7,12 @@ using namespace std;
 
 class Producto {
 protected:
-    TipoNombre nombre;
+    string nombre;
 
 public:
-    Producto(TipoNombre nombre);
+    Producto(string nombre);
     Producto();
-    TipoNombre get_nombre();
+    string get_nombre();
 };
 
 
