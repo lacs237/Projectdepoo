@@ -1,19 +1,19 @@
-#include "robot.h"
-#include "producto.h"
+#include "Robot.h"
+#include "Producto.h"
 
-robot::robot() {
+Robot::Robot() {
 
 }
 
-void robot::setInicio(int x, int y) {
+void Robot::setInicio(int x, int y) {
     this->origenX = x;
     this->origenY = y;
 }
 
-void robot::Insertar(stack &pila, producto producto) {
+void Robot::Insertar(Stack &pila, Producto producto) {
     pila.push(producto);
 }
 
-producto* robot::Extraer(stack &pila, TipoNombre producto) {
+Producto* Robot::Extraer(Stack &pila, TipoNombre producto) {
     return pila.pop(producto);
 }

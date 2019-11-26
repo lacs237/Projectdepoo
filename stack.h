@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "Producto.h"
-#include "tipos.h"
+#include "Tipos.h"
 
 using namespace std;
 

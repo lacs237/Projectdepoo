@@ -1,21 +1,21 @@
 #ifndef PROJECTDEPOO_ROBOT_H
 #define PROJECTDEPOO_ROBOT_H
 
-#include "tipos.h"
-#include "producto.h"
-#include "stack.h"
+#include "Tipos.h"
+#include "Producto.h"
+#include "Stack.h"
 
-class robot {
+class Robot {
 private:
     TipoPosicion origenX;
     TipoPosicion origenY;
 
 public:
-    robot();
+    Robot();
     void setInicio(TipoPosicion x, TipoPosicion y);
-    void Insertar(stack &pila, producto producto);
+    void Insertar(Stack &pila, Producto producto);
     void Moverse();
-    producto* Extraer(stack &pila, TipoNombre producto);
+    producto* Extraer(Stack &pila, TipoNombre producto);
 
 };
 
