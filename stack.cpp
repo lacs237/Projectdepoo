@@ -1,13 +1,13 @@
-#include "stack.h"
+#include "Stack.h"
 
 
-stack::stack(TipoTamaño tamaño) {
+Stack::Stack(TipoTamaño tamaño) {
     this->tamaño = tamaño;
-    this->productos = new producto[tamaño];
+    this->productos = new Producto[tamaño];
     this->indiceTop = -1;
 }
 
-void stack::push(producto producto) {
+void Stack::push(Producto producto) {
     if (indiceTop == (tamaño - 1)) {
         cout << "No hay mas espacio." << endl;
     }
@@ -17,8 +17,8 @@ void stack::push(producto producto) {
     }
 }
 
-producto* stack::pop(TipoNombre producto) {
-    producto *objetoTop = nullptr;
+Producto* Stack::pop(TipoNombre producto) {
+    Producto *objetoTop = nullptr;
     int indiceTemp = indiceTop;
     if (indiceTop != -1) {
         while (indiceTemp >= 0) {
@@ -36,9 +36,9 @@ producto* stack::pop(TipoNombre producto) {
     return objetoTop;
 }
 
-stack::stack() {
+Stack::Stack() {
     this->tamaño = tamañoPredeterminado;
-    this->productos = new producto[tamañoPredeterminado];
+    this->productos = new Producto[tamañoPredeterminado];
     this->indiceTop = -1;
 }
 

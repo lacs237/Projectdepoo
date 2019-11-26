@@ -1,29 +1,25 @@
-//
-// Created by LUIS on 22/11/2019.
-//
-
 #ifndef PROJECTDEPOO_STACK_H
 #define PROJECTDEPOO_STACK_H
 
 #include <iostream>
 
-#include "producto.h"
+#include "Producto.h"
 #include "tipos.h"
 
 using namespace std;
 
-class stack {
+class Stack {
 private:
     TipoTamaño tamaño, indiceTop;
-    producto *productos;
+    Producto *productos;
     TipoTamaño tamañoPredeterminado = 10;
 
 public:
-    stack(TipoTamaño tamaño);
-    void push(producto producto);
-    producto* pop(TipoNombre producto);
+    Stack(TipoTamaño tamaño);
+    void push(Producto producto);
+    Producto* pop(TipoNombre producto);
 
-    stack();
+    Stack();
 };
 
 
