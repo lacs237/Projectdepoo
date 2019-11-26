@@ -1,14 +1,14 @@
-#include "tipos.h"
-#include "producto.h"
+#include "Tipos.h"
+#include "Producto.h"
 
-producto::producto(TipoNombre nombre) {
+Producto::Producto(TipoNombre nombre) {
     this->nombre = nombre;
 }
 
-producto::producto() {
+Producto::Producto() {
 
 }
 
-string producto::get_nombre() {
+TipoNombre Producto::get_nombre() {
     return nombre;
 }

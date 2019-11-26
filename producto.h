@@ -5,13 +5,13 @@
 
 using namespace std;
 
-class producto {
+class Producto {
 protected:
     TipoNombre nombre;
 
 public:
-    producto(TipoNombre nombre);
-    producto();
+    Producto(TipoNombre nombre);
+    Producto();
     TipoNombre get_nombre();
 };
 
