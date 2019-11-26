@@ -3,7 +3,7 @@
 
 Stack::Stack(TipoTamano tamano) {
     this->tamano = tamano;
-    this->productos = new Producto[tamano](nullptr);
+    this->productos = new Producto[tamano];
     this->indiceTop = -1;
 }
 
@@ -38,7 +38,7 @@ Producto* Stack::pop(TipoNombre producto) {
 
 Stack::Stack() {
     this->tamano = tamanoPredeterminado;
-    this->productos = new Producto[tamanoPredeterminado](nullptr);
+    this->productos = new Producto[tamanoPredeterminado];
     this->indiceTop = -1;
 }
 

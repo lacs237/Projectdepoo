@@ -14,7 +14,7 @@ public:
     Robot();
     void setInicio(TipoPosicion x, TipoPosicion y);
     void Insertar(Stack &pila, Producto producto);
-    producto* Extraer(Stack &pila, TipoNombre producto);
+    Producto* Extraer(Stack &pila, TipoNombre producto);
 
 };
 
