@@ -8,14 +8,26 @@ using namespace std;
 
 TipoNumero NUMERO_DE_ROBOTS;
 TipoNumero NUMERO_DE_INSTRUCCIONES;
-fstream archivo("input.txt");
+ifstream archivo("input.txt");
 Almacen *almacen;
 
-void leerArchivo();
-void leerDatos();
+void leerDatos(istream& in){
+    TipoNombre
+};
+
+void abrirArchivo(istream& in){
+        if (archivo.is_open()) {
+            leerDatos();
+            archivo.close();
+        }
+        else
+            cout << "No se puede abrir el archivo" << endl;
+};
+
 
 
 int main() {
-    leerArchivo();
+    abrirArchivo(cin);
+    leerDatos(cin);
     return 0;
 }

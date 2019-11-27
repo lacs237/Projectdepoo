@@ -2,7 +2,7 @@
 
 
 Almacen::Almacen(TipoNumero n, TipoPosicion dimensionX, TipoPosicion dimensionY) {
-    this->NUMERO_DE_ROBOTS = n;
+    this->NUMERO_DE_ROBOTS = 3;
     robots = new Robot[NUMERO_DE_ROBOTS];
     almacen = new Stack*[dimensionX];
     for (int fila = 0; fila < dimensionY; ++fila) {

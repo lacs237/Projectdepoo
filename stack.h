@@ -2,7 +2,6 @@
 #define PROJECTDEPOO_STACK_H
 
 #include <iostream>
-
 #include "producto.h"
 #include "tipos.h"
 

@@ -19,7 +19,7 @@ void Stack::push(Producto producto) {
 
 Producto* Stack::pop(TipoNombre producto) {
     Producto *objetoTop = nullptr;
-    int indiceTemp = indiceTop;
+    TipoNumero indiceTemp = indiceTop;
     if (indiceTop != -1) {
         while (indiceTemp >= 0) {
             if (productos[indiceTemp].get_nombre() == producto) {
@@ -28,7 +28,7 @@ Producto* Stack::pop(TipoNombre producto) {
             }
             --indiceTemp;
         }
-        for (int i = indiceTemp; i < indiceTop; ++i) {
+        for (TipoNumero i = indiceTemp; i < indiceTop; ++i) {
             productos[i] = productos[i + 1];
         }
         --indiceTop;

@@ -3,12 +3,12 @@
 
 #include <iostream>
 
-#include "Stack.h"
-#include "Robot.h"
+#include "stack.h"
+#include "robot.h"
 
-#include "Libro.h"
-#include "Dispositivo.h"
-#include "Disco.h"
+#include "libro.h"
+#include "dispositivo.h"
+#include "disco.h"
 
 using namespace std;
 
