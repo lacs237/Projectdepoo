@@ -17,7 +17,6 @@ public:
     Stack(TipoTamano tamano);
     void push(Producto producto);
     Producto* pop(TipoNombre producto);
-
     Stack();
 };
 

@@ -8,26 +8,62 @@ using namespace std;
 
 TipoNumero NUMERO_DE_ROBOTS;
 TipoNumero NUMERO_DE_INSTRUCCIONES;
-ifstream archivo("input.txt");
 Almacen *almacen;
 
-void leerDatos(istream& in){
-    TipoNombre
-};
-
-void abrirArchivo(istream& in){
-        if (archivo.is_open()) {
-            leerDatos();
-            archivo.close();
-        }
-        else
+void abrirArchivo(TipoNombre file_name, ifstream& archivo){
+    archivo.open(file_name);
+        if (!archivo.is_open()) {
             cout << "No se puede abrir el archivo" << endl;
+            return;
+        }
 };
 
+void leerDatos() {
+    TipoNombre linea, operacion, producto;
+    stringstream ss;
+    TipoNumero robot;
+    TipoPosicion robotX, robotY, destino_x, destino_y;
 
+    /* Quiero volver a usar el archivo que usé por referencia en leerArchivo(),
+    pero cuando lo trato de hacer se malogra el "getline" */
+
+    getline(archivo, linea);
+    NUMERO_DE_ROBOTS = stoi(linea);
+    almacen = new Almacen(NUMERO_DE_ROBOTS, 30, 30);
+    for (TipoNumero numeroRobot = 0; numeroRobot < NUMERO_DE_ROBOTS; ++numeroRobot) {
+        getline(archivo, linea);
+        ss << linea;
+        ss >> robotX >> robotY;
+        almacen->setOrigenRobot(numeroRobot, robotX, robotY);
+        ss.clear();
+    }
+    getline(archivo, linea);
+    NUMERO_DE_INSTRUCCIONES = stoi(linea);
+    for (TipoNumero numeroInstruccion = 0; numeroInstruccion < NUMERO_DE_INSTRUCCIONES; ++numeroInstruccion) {
+        getline(archivo, linea);
+        ss << linea;
+        ss >> robot >> operacion >> destino_x >> destino_y >> producto;
+        if (operacion == "Ingreso") {
+
+            /* No entiendo porque los constructores del almacén salen en rojo */
+
+            almacen->poner(robot, destino_x, destino_y, producto);
+        }
+        else if (operacion == "Retiro") {
+            Producto *res = almacen->obtener(robot, destino_x, destino_y, producto);
+            if (res) {
+                cout << "Retirado "<<endl;
+            }
+            else
+                cout << "No se encontro el elemento" << endl;
+        }
+        ss.clear();
+    }
+}
 
 int main() {
-    abrirArchivo(cin);
-    leerDatos(cin);
+    ifstream archivo;
+    abrirArchivo("prueba.txt",archivo);
     return 0;
 }
+

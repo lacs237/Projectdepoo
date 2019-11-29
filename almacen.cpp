@@ -2,13 +2,12 @@
 
 
 Almacen::Almacen(TipoNumero n, TipoPosicion dimensionX, TipoPosicion dimensionY) {
-    this->NUMERO_DE_ROBOTS = 3;
+    this->NUMERO_DE_ROBOTS = n;
     robots = new Robot[NUMERO_DE_ROBOTS];
     almacen = new Stack*[dimensionX];
-    for (int fila = 0; fila < dimensionY; ++fila) {
-        almacen[fila] = new Stack[dimensionY];
+    for (TipoNumero i = 0; i < dimensionY; ++i) {
+        almacen[i] = new Stack[dimensionY];
     }
-
 }
 
 void Almacen::Poner(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto) {
