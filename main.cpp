@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
 
 #include "almacen.h"
 
@@ -11,14 +12,13 @@ TipoNumero NUMERO_DE_INSTRUCCIONES;
 Almacen *almacen;
 
 void abrirArchivo(TipoNombre file_name, ifstream& archivo){
-    archivo.open(file_name);
+    archivo.open(file_name, ios::in);
         if (!archivo.is_open()) {
             cout << "No se puede abrir el archivo" << endl;
-            return;
         }
 };
 
-void leerDatos() {
+void leerDatos(ifstream& archivo) {
     TipoNombre linea, operacion, producto;
     stringstream ss;
     TipoNumero robot;
@@ -44,13 +44,10 @@ void leerDatos() {
         ss << linea;
         ss >> robot >> operacion >> destino_x >> destino_y >> producto;
         if (operacion == "Ingreso") {
-
-            /* No entiendo porque los constructores del almacén salen en rojo */
-
-            almacen->poner(robot, destino_x, destino_y, producto);
+            almacen->Poner(robot, destino_x, destino_y, producto);
         }
         else if (operacion == "Retiro") {
-            Producto *res = almacen->obtener(robot, destino_x, destino_y, producto);
+            Producto *res = almacen->Obtener(robot, destino_x, destino_y, producto);
             if (res) {
                 cout << "Retirado "<<endl;
             }
@@ -64,6 +61,7 @@ void leerDatos() {
 int main() {
     ifstream archivo;
     abrirArchivo("prueba.txt",archivo);
+    leerDatos(archivo);
     return 0;
 }
 

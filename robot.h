@@ -15,7 +15,6 @@ public:
     void setInicio(TipoPosicion x, TipoPosicion y);
     void Insertar(Stack &pila, Producto producto);
     Producto* Extraer(Stack &pila, TipoNombre producto);
-
 };
 
 #endif //PROJECTDEPOO_ROBOT_H

@@ -23,7 +23,10 @@ public:
     void setOrigenRobot(int id, TipoPosicion x, TipoPosicion y);
     void Poner(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto);
     Producto* Obtener(int id, TipoPosicion destinoX, TipoPosicion destinoY, TipoNombre producto);
-
+    ~Almacen(){
+        delete robots;
+        delete almacen;
+    };
 };
 
 

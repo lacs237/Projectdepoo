@@ -2,7 +2,6 @@
 #include "producto.h"
 
 Robot::Robot() {
-
 }
 
 void Robot::setInicio(int x, int y) {
